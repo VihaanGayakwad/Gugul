@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gugul</title>
+  <style>
+    :root {
+      --primary: #4285f4;
+      --secondary: #ea4335;
+      --tertiary: #fbbc05;
+      --quaternary: #34a853;
+      --background: #f8f9fa;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: var(--background);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      color: #202124;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+    }
+    .container {
+      background: #fff;
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .logo {
+      width: 180px;
+      margin-bottom: 1.5rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary), var(--tertiary), var(--quaternary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #5f6368;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .buttons a {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .buttons a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
+    .buttons a:nth-child(1) {
+      background: var(--primary);
+      box-shadow: 0 4px 15px rgba(66, 133, 244, 0.4);
+    }
+    .buttons a:nth-child(1)::before {
+      background: linear-gradient(45deg, var(--primary), #3367d6);
+      opacity: 0;
+    }
+    .buttons a:nth-child(2) {
+      background: var(--secondary);
+      box-shadow: 0 4px 15px rgba(234, 67, 53, 0.4);
+    }
+    .buttons a:nth-child(2)::before {
+      background: linear-gradient(45deg, var(--secondary), #d62516);
+      opacity: 0;
+    }
+    .buttons a:hover::before {
+      opacity: 1;
+    }
+    .buttons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+    }
+    .buttons a:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/Gugul.png" alt="Gugul Logo" class="logo">
+    <h1>Welcome to Gugul</h1>
+    <p>Discover Gugul, your digital gateway for creativity and productivity. Experience the next generation of search technology at your fingertips.</p>
+    <div class="buttons">
+      <a href="Gugul.exe" download="Gugul.exe">Download</a>
+      <a href="web.html">Gugul web</a>
+    </div>
+  </div>
+</body>
+</html>
