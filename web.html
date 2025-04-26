@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<script>
+    function changeLastUrlPart(newPart) {
+    const url = new URL(window.location.href);
+    const pathParts = url.pathname.split('/');
+    pathParts[pathParts.length - 1] = newPart;
+    url.pathname = pathParts.join('/');
+    history.pushState({}, '', url);
+  }
+
+  // Example usage:
+  // Call this function to change the last part to "cheese"
+  changeLastUrlPart('web');
+</script>
+  
   <meta charset="UTF-8">
   <title>Gugul Web</title>
   <style>
