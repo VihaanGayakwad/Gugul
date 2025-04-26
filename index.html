@@ -41,6 +41,8 @@
       width: 180px;
       margin-bottom: 1.5rem;
       animation: pulse 2s infinite;
+      pointer-events: none;
+      user-select: none;
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -123,7 +125,7 @@
 </head>
 <body>
   <div class="container">
-    <img src="/Gugul.png" alt="Gugul Logo" class="logo">
+    <img src="./Gugul.png" alt="Gugul Logo" class="logo" oncontextmenu="return false;">
     <h1>Welcome to Gugul</h1>
     <p>Discover Gugul, your digital gateway for creativity and productivity. Experience the next generation of search technology at your fingertips.</p>
     <div class="buttons">
